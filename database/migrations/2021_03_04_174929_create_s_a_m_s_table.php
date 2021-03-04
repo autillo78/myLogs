@@ -14,8 +14,19 @@ class CreateSAMSTable extends Migration
     public function up()
     {
         Schema::create('s_a_m_s', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+           // COLUMNS
+           $table->mediumIncrements('id');
+           $table->date('date');
+           $table->tinyInteger('qty');
+
+           // INDEX
+       
+           // UNIQUE
+           
+           // PRIMARY KEYS
+           
+           // FOREIGN KEYS
+           
         });
     }
 

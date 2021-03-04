@@ -89,7 +89,7 @@
                               {{__('Logs')}}
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="#">S.A.M</a>
+                              <a class="dropdown-item" href="{{route('sams.index')}}">S.A.M</a>
                               <a class="dropdown-item" href="#">Minoxidil</a>
                               <a class="dropdown-item" href="{{route('readings.index')}}">Reading</a>
                               <a class="dropdown-item" href="#">Exercice</a>

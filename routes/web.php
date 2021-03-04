@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Books\BookController;
 use App\Http\Controllers\Books\ReadingController;
+use App\Http\Controllers\SAMs\SAMController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -30,8 +31,10 @@ Route::group(['middleware' => 'auth'], function () {
         return view('/menu');
     });
     
+    // SAMs
+    Route::resource('sams', SAMController::class)->names('sams');
 
-    // readingcd 
+    // reading
     Route::resource('/readings', ReadingController::class)
     ->only(['index', 'create', 'store'])
     ->names('readings');
