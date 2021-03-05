@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Books;
+namespace App\Http\Controllers\Logs;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Books\storeReadingRequest;
+use App\Http\Requests\Logs\StoreReadingRequest;
 use App\Models\Books\Book;
-use App\Models\Books\Reading;
+use App\Models\Logs\Reading;
 
 class ReadingController extends Controller
 {
@@ -37,10 +37,10 @@ class ReadingController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  storeReadingRequest  $request
+     * @param  StoreReadingRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(storeReadingRequest $request)
+    public function store(StoreReadingRequest $request)
     {
         Reading::create([
             'date'      => $request->date, 

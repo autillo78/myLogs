@@ -33,7 +33,7 @@
         <!-- Sidebar -->
         <nav id="sidebar"> 
             
-            <a id="sidebarDropdown" class="" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+            <a id="sidebarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                 <div class="logout btn-grey">
                     <i class="fas fa-sign-out-alt"></i><br>
                     @auth
@@ -53,6 +53,18 @@
                     @csrf
                 </form>
             </div>
+
+            <div class="sidebar-menu btn-grey">
+                <i class="fas fa-chart-pie"></i><br>
+                Dashboard
+            </div>
+
+            <a href="{{route('fullform.index')}}">
+                <div class="sidebar-menu btn-grey">
+                    <i class="fab fa-wpforms"></i><br>
+                        Full Form
+                </div>
+            </a>
 
             <ul class="list-unstyled components">
                 <p>myLogs system</p>
@@ -89,18 +101,20 @@
                               {{__('Logs')}}
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="{{route('sams.index')}}">S.A.M</a>
-                              <a class="dropdown-item" href="#">Minoxidil</a>
-                              <a class="dropdown-item" href="{{route('readings.index')}}">Reading</a>
-                              <a class="dropdown-item" href="#">Exercice</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#">S.I.</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#">Event</a>
-                              <a class="dropdown-item" href="#">Trips</a>
-                              <a class="dropdown-item" href="#">Thought</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#">Finances</a>
+                                <a class="dropdown-item" href="{{route('fullform.create')}}">Full Form</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{{route('sams.index')}}">S.A.M</a>
+                                <a class="dropdown-item" href={{route('minoxidils.index')}}>Minoxidil</a>
+                                <a class="dropdown-item" href="{{route('readings.index')}}">Reading</a>
+                                <a class="dropdown-item" href="{{route('exercises.index')}}">Exercice</a>                              
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Event</a>
+                                <a class="dropdown-item" href="#">Trips</a>
+                                <a class="dropdown-item" href="#">Thought</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">S.I.</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Finances</a>
                             </div>
                           </li>
                           <li class="nav-item dropdown">

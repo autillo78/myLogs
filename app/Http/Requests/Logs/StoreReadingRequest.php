@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Books;
+namespace App\Http\Requests\Logs;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class storeReadingRequest extends FormRequest
+class StoreReadingRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.

@@ -1,8 +1,11 @@
 <?php
 
 use App\Http\Controllers\Books\BookController;
-use App\Http\Controllers\Books\ReadingController;
-use App\Http\Controllers\SAMs\SAMController;
+use App\Http\Controllers\Logs\ExerciseController;
+use App\Http\Controllers\Logs\FullFormController;
+use App\Http\Controllers\Logs\MinoxidilControler;
+use App\Http\Controllers\Logs\ReadingController;
+use App\Http\Controllers\Logs\SAMController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -30,9 +33,18 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/', function () {
         return view('/menu');
     });
+
+    // full form
+    Route::resource('/fullform', FullFormController::class)->names('fullform');
+
+    // exercises
+    Route::resource('/exercises', ExerciseController::class)->names('exercises');
+
+    // minoxidil
+    Route::resource('/minoxidil', MinoxidilControler::class)->names('minoxidils');
     
     // SAMs
-    Route::resource('sams', SAMController::class)->names('sams');
+    Route::resource('/SAMs', SAMController::class)->names('sams');
 
     // reading
     Route::resource('/readings', ReadingController::class)

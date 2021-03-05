@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\SAMs;
+namespace App\Http\Controllers\Logs;
 
 use App\Http\Controllers\Controller;
-use App\Models\SAMs\SAM;
+use App\Models\Logs\SAM;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
